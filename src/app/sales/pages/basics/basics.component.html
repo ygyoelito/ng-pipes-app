@@ -1,0 +1,96 @@
+<div class="text-layout">
+  <h1>Basic pipes</h1>
+  <p>Pipes included in Angular (usually in the Commons Module)</p>
+</div>
+
+<div class="grid">
+  <div class="col-4">
+    <p-card header="uppercase" [subheader]="nameLower">
+      <small>PIPES APPLIED:</small> {{ nameLower | uppercase }}
+    </p-card>
+  </div>
+  <div class="col-4">
+    <p-card header="lowercase" [subheader]="nameUpper">
+      <small>PIPES APPLIED:</small> {{ nameUpper | lowercase }}
+    </p-card>
+  </div>
+  <div class="col-4">
+    <p-card header="titlecase" [subheader]="nameFull">
+      <small>PIPES APPLIED:</small> {{ nameFull | titlecase }}
+    </p-card>
+  </div>
+</div>
+
+<div class="text-layout">
+  <h1>Date & Time pipes</h1>
+  <p>Date & Time formats with Pipes</p>
+</div>
+
+<div class="grid">
+  <div class="col-6">
+    <p-card header="Variables">
+      <ul>
+        <li>date</li>
+        <li>date | date</li>
+        <li>date | date:short</li>
+        <li>date | date:medium</li>
+        <li>date | date:long</li>
+        <li>date | date:full</li>
+        <li>date | date:shortDate</li>
+        <li>date | date:mediumDate</li>
+        <li>date | date:longDate</li>
+        <li>date | date:fullDate</li>
+        <li>date | date:shortTime</li>
+        <li>date | date:mediumTime</li>
+        <li>date | date:longTime</li>
+        <li>date | date:fullTime</li>
+        <li>
+          date | date:'MMMM' (customized,
+          <a href="https://angular.io/api/common/DatePipe" target="_blank"
+            >clic me</a
+          >)
+        </li>
+        <li>
+          date | date:'MMMM dd, yyyy' (customized,
+          <a href="https://angular.io/api/common/DatePipe" target="_blank"
+            >clic me</a
+          >)
+        </li>
+      </ul>
+      <hr />
+      <ul>
+        <li>date | date : "long" : 'GMT-6'</li>
+        <li>date | date : "long" : 'GMT-4'</li>
+        <li>date | date : "long" : 'GMT-5' : 'fr'</li>
+      </ul>
+    </p-card>
+  </div>
+  <div class="col-6">
+    <p-card header="Variables with Pipes applied">
+      <ul>
+        <li>{{ date }}</li>
+        <li>{{ date | date }}</li>
+        <li>{{ date | date : "short" }}</li>
+        <li>{{ date | date : "medium" }}</li>
+        <li>{{ date | date : "long" }}</li>
+        <li>{{ date | date : "full" }}</li>
+        <li>{{ date | date : "shortDate" }}</li>
+        <li>{{ date | date : "mediumDate" }}</li>
+        <li>{{ date | date : "longDate" }}</li>
+        <li>{{ date | date : "fullDate" }}</li>
+        <li>{{ date | date : "shortTime" }}</li>
+        <li>{{ date | date : "mediumTime" }}</li>
+        <li>{{ date | date : "longTime" }}</li>
+        <li>{{ date | date : "fullTime" }}</li>
+        <li>{{ date | date : "MMMM" }}</li>
+        <li>{{ date | date : "MMMM dd, yyyy" }}</li>
+      </ul>
+      <hr />
+      <ul>
+        <li>{{ date | date : "long" : 'GMT-6' }}</li>
+        <li>{{ date | date : "long" : 'GMT-4' }}</li>
+        <li>{{ date | date : "long" : 'GMT-5' : 'fr' }}</li>
+      </ul>
+    </p-card>
+  </div>
+</div>
